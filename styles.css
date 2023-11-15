@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&family=Lobster&display=swap");
+
+:root {
+	--clr-beige: #ddc3a5;
+	--clr-black-brown: #201e20;
+	--clr-tan: #e0a96d;
+	--clr-spice: #783937;
+	--clr-white: #FFFFFF;
+	--clr-holiday-green: #37785a;
+	--clr-holiday-purple: #783755;
+	/* 	Beige #DDC3A5, Black-brown #201E20, Tan #E0A96D, Spice 783937*/
+	--ff-heading: "Lobster", sans-serif;
+	--ff-body: "Cabin Condensed", sans-serif;
+}
+
+/* CSS RESET */
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+/* STYLING FOR THIS SITE */
+
+body {
+	font-family: var(--ff-body);
+	background: var(--clr-beige);
+	color: var(--clr-black-brown);
+	line-height: 1.7rem;
+}
+
+h1,
+h2 {
+	font-family: var(--ff-heading);
+	color: var(--clr-spice);
+	text-align: center;
+	padding: 2rem 0;
+}
+
+h3 {
+	color: var(--clr-spice);
+	text-decoration: underline;
+}
+
+header {
+	background: var(--clr-black-brown);
+	color: var(--clr-beige);
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+nav li {
+	margin: 1rem 1em;
+}
+
+nav a {
+	color: var(--clr-beige);
+	text-transform: uppercase;
+}
+
+footer {
+	background: var(--clr-black-brown);
+	color: var(--clr-beige);
+    margin-top: auto;
+}
+
+img {
+	border-radius: 10px;
+}
+
+article {
+	padding: 1.5rem;
+}
+
+em {
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+
+.a11y--skip-to-main {
+	color: var(--clr--tan);
+}
+
+.flex {
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.text--align-center {
+    text-align: center;
+}
+
+.image--centered {
+    display: block;
+    margin: auto;
+}
+
+.format--max-width-70 {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.padding-y-2 {
+    padding: 2rem 0;
+}
+
+.footer--nav {
+	background: var(--clr-black-brown);
+	color: var(--clr-beige);
+	text-transform: none;
+}
+
+.font--like-h2 {
+	font-family: var(--ff-heading);
+	color: var(--clr-spice);
+	text-align: center;
+	padding: 2rem 0;
+}
+
+.font--italic {
+	font-style: italic;
+}
+
+.font--italic {
+	font-style: italic;
+}
+
+/* ANIMATED CALL TO ACTION BUTTON */
+/* CODE CREDIT: restyled from this code pen: https://codepen.io/IzzatAzmi/pen/KWemrY?editors=0100 */
+
+.btn--cta {
+  border: 5px solid transparent;
+  background: var(--clr-spice);
+  color: var(--clr-white);
+	text-transform: uppercase;
+	width: 20rem;
+  border-radius: 42px;
+  padding: 15px 30px;
+	margin-bottom: 2rem;
+  overflow: hidden;
+  transition: 
+    all        1.2s,
+    border     0.5s 1.2s,
+    box-shadow 0.3s 1.5s;
+  white-space: nowrap;
+  text-indent: 23px;
+  font-weight: bold;
+  span {
+    display: inline-block;
+    transform: translateX(300px);
+    font-weight: normal;
+    opacity: 0;
+    transition: 
+      opacity 0.1s 0.5s,
+      transform 0.4s 0.5s;
+  }
+  &:hover {
+    text-indent: 0;
+		width: 30rem;
+    background: var(--clr-holiday-green);
+    color: #FFE8A3;
+    border: 10px solid var(--clr-holiday-purple);
+		padding-right: 20px;
+    box-shadow: 3px 3px 2px rgba(black, 0.15);
+    span {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* A11Y CSS */
+@media (prefers-reduced-motion: reduce) {
+  .btn--cta {
+    animation: none;
+  }
+}

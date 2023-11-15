@@ -75,6 +75,16 @@ nav ul {
 	justify-content: center;
 }
 
+a:hover, a:focus {
+    text-decoration: none;
+    color: var(--clr-spice);
+    font-weight: bolder;
+}
+
+/* a:visited {
+    color: var(--clr-spice);
+} */
+
 nav li {
 	margin: 1rem 1em;
 }
@@ -84,6 +94,7 @@ nav a {
 	text-transform: uppercase;
 }
 
+
 nav a:hover, nav a:focus {
     background-color: var(--clr-beige);
     color: var(--clr-spice);
@@ -91,11 +102,11 @@ nav a:hover, nav a:focus {
     border-radius: 20px;
 }
 
-a:hover, a:focus {
-    text-decoration: none;
+/* nav a:hover > a:hover, nav a:visited > a:focus {
     color: var(--clr-spice);
-    font-weight: bolder;
-}
+	text-transform: uppercase;
+} */
+
 
 footer {
 	background: var(--clr-black-brown);

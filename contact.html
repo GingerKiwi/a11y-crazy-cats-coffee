@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Cats</title>
+    <link rel="icon" href="./assets/crazy-cats-coffee-favicon/favicon.ico" />
+    <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <header class="text--align-center">
@@ -24,8 +25,35 @@
 </header>
 <main class="flex format--max-width-80">
     <h1>Contact Us</h1>
-    
-    
+    <h2>Sign up for our monthly newsletter!</h2>
+    <p class="format--max-width-70">Every month Crazy Cats Coffee sends out a short email with the specials of the month, events, a special coupon, and rescue cat stories.</p>
+    <div id="error-message" tabindex="-1" class="format--max-width-70"></div>
+    <p class="format--max-width-70">* indicates required fields.</p>
+    <div id="container--form" class="container--form">
+        
+        <form id="newsletter--signup" action="thank-you.html" method="post">
+        <p><strong>
+            Fill out the information below to get the Crazy Cats Coffee newsletter in your inbox
+        </strong></p>
+        <div>
+        <label for="name--customer">Your first name *</label>
+        <!-- <p class="name--customer" id="error01">
+            Please type your first name</p> -->
+        <input type="text" id="name--customer" autocomplete="name" required aria-describedby="error01"></input>
+        </div>
+        
+        <div>   
+        <label for="email">Your email *</label>
+        <!-- <p id="error02" class="error">
+            Please type your email</p> -->
+        <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="error02">
+        </div>
+        <div>
+            <button type="submit" class="btn--submit">Submit</button>
+        </div>
+            
+        </form>
+    </div>
 </main>
 <footer class="padding-y-2">
 	<nav aria-label="Secondary navigation">
@@ -39,4 +67,5 @@
 	</nav>
     <p>Site logo was developed in figma using "cat in mug" by Emily Murphy from</p> <a class="a--like-nav-hover a--like-nav" href="https://thenounproject.com/browse/icons/term/cat-in-mug/" target="_blank" title="cat in mug Icons" rel="nofollow noopener noreferrer external">Noun Project</a> (CC BY 3.0)
 </footer>
+<script src="newsletter.js"></script>
 </html>
